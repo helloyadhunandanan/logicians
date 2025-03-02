@@ -13,7 +13,14 @@
     <div class="question-section">
         <h2>Question 1:</h2>
         <p>Write a Python program to find the factorial of a number.</p>
-        <textarea id="code1" class="code-area" placeholder="Paste your Python program here..."></textarea>
+        <textarea id="code1" class="code-area" placeholder="L = input().strip(' ').split(' ')
+k = int(input())
+L = [int(num) for num in L]
+if k > len(L):
+  print("The clue k should be smaller than or equal to the list size", end='')
+else:
+  sorted_arr = sorted(L)
+  print(sorted_arr[k - 1], end='')"></textarea>
         <button onclick="copyCode('code1')">Copy</button>
         <button onclick="downloadCode('code1', 'factorial.py')">Download</button>
     </div>
