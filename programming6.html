@@ -8,11 +8,11 @@
 </head>
 <body>
 
-    <h1>Python Programming Assignment(Week 6)</h1>
+    <h1>Python Programming Assignment(WEEK 9)</h1>
 
     <div class="question-section">
         <h2>Question 1:</h2>
-        <p>The Treasure Hunt</p>
+        <p></p>
         <textarea id="code1" class="code-area" placeholder="def orangecap(d):
     total={}
     l=[]
@@ -30,41 +30,53 @@
             if total[player] > topscore:
                 playername=player
                 topscore=total[player]
-    return (playername,topscore)></textarea>
+    return (playername,topscore)"></textarea>
         <button onclick="copyCode('code1')">Copy</button>
         <button onclick="downloadCode('code1', 'factorial.py')">Download</button>
     </div>
 
     <div class="question-section">
         <h2>Question 2:</h2>
-        <p>The Binary Quest/p>
-        <textarea id="code2" class="code-area" placeholder="def decimal_to_binary(n):
-  if n == 0:
-    return "0"
-  if n == 1:
-    return "1"
-  else:
-    return decimal_to_binary(n // 2) + str(n % 2)
-n = int(input())
-print(decimal_to_binary(n), end='')"></textarea>
+        <p></p>
+        <textarea id="code2" class="code-area" placeholder="def threesquares(m):
+  if(m<0):
+    return(False)
+  l=[]
+  for i in range(0, int(m**0.5)+1):
+    l+=[i*i]
+  for i in l:
+    for j in l:
+      for k in l:
+        if(i+j+k==m):
+          return (True)
+  return(False)"></textarea>
         <button onclick="copyCode('code2')">Copy</button>
         <button onclick="downloadCode('code2', 'prime.py')">Download</button>
     </div>
 
     <div class="question-section">
         <h2>Question 3:</h2>
-        <p>Removing an element Recursively</p>
-        <textarea id="code3" class="code-area" placeholder="def delete_elements(lst, item):
-    if not lst:
-        return []
-    if lst[0] == item:
-        return delete_elements(lst[1:], item)
+        <p></p>
+        <textarea id="code3" class="code-area" placeholder="def hillvalley(l):
+  if len(l)<4:
+    return False
+  if((l[1]-l[0])>0):
+    v=1
+  else:
+    v=-1
+  p=0
+  for i in range(len(l)-1):
+    if((l[i+1]-l[i])>0):
+      d=1
     else:
-        return [lst[0]] + delete_elements(lst[1:], item)
-lst = list(map(int, input().split(' ')))
-item = int(input())
-new_lst = delete_elements(lst, item)
-print(*new_lst, end='')"></textarea>
+      d=-1
+    if (d!=v):
+      p+=1
+      v=d
+  if(p==1):
+    return (True)
+  else:
+    return(False)"></textarea>
         <button onclick="copyCode('code3')">Copy</button>
         <button onclick="downloadCode('code3', 'fibonacci.py')">Download</button>
     </div>
@@ -82,7 +94,7 @@ print(*new_lst, end='')"></textarea>
             let codeArea = document.getElementById(id);
             codeArea.select();
             document.execCommand("copy");
-            alert("അടി സക്കെ! CODE COPIED!!! എന്നി പോയി പേസ്റ്റ് ചെയ്യ് ");
+            alert("Code copied!");
         }
 
         function downloadCode(id, filename) {
