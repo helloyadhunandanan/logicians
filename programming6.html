@@ -13,14 +13,24 @@
     <div class="question-section">
         <h2>Question 1:</h2>
         <p>The Treasure Hunt</p>
-        <textarea id="code1" class="code-area" placeholder="L = input().strip(' ').split(' ')
-            k = int(input())
-L = [int(num) for num in L]
-if k > len(L):
-  print("The clue k should be smaller than or equal to the list size", end='')
-else:
-  sorted_arr = sorted(L)
-  print(sorted_arr[k - 1], end='')"></textarea>
+        <textarea id="code1" class="code-area" placeholder="def orangecap(d):
+    total={}
+    l=[]
+    for p in d.values():
+        for ply in p.keys():
+            if ply not in l:
+                l=l+[ply]
+    for n in l:
+        total[n]=0
+        for match in d.keys():
+            if n in d[match].keys():
+                total[n]=total[n]+d[match][n]
+    topscore=0
+    for player in total.keys():
+            if total[player] > topscore:
+                playername=player
+                topscore=total[player]
+    return (playername,topscore)></textarea>
         <button onclick="copyCode('code1')">Copy</button>
         <button onclick="downloadCode('code1', 'factorial.py')">Download</button>
     </div>
