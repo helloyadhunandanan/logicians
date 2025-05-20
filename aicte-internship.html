@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AICTE Internship Info</title>
   <style>
     * {
@@ -12,8 +13,20 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+    }
+
     body {
-      background: #f4f7fa;
+      background: linear-gradient(270deg,
+        rgb(5, 81, 202),
+        rgb(23, 225, 50),
+        rgb(8, 7, 6),
+        rgb(150, 115, 124),
+        rgb(228, 105, 11));
+      background-size: 1000% 1000%;
+      animation: gradientRGB 30s ease infinite;
       color: #333;
       line-height: 1.6;
       display: flex;
@@ -21,11 +34,19 @@
       min-height: 100vh;
     }
 
+    @keyframes gradientRGB {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     header {
-      background-color: #0056b3;
+      background-color: rgba(0, 86, 179, 0.85);
       color: white;
       padding: 20px 30px;
       text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      border-radius: 0 0 15px 15px;
     }
 
     .badge {
@@ -47,17 +68,17 @@
     .ministry {
       margin-top: 8px;
       font-size: 14px;
-      color: #e0f0ff;
+      color: #d0e6ff;
     }
 
     .container {
       flex: 1;
       max-width: 800px;
-      margin: 30px auto;
+      margin: 30px auto 50px auto;
       padding: 20px;
-      background: white;
+      background: rgba(255, 255, 255, 0.9);
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
 
     h2 {
@@ -78,18 +99,22 @@
     a {
       color: #0077cc;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     a:hover {
       text-decoration: underline;
+      color: #004a8f;
     }
 
     footer {
-      background: #0e1c36;
+      background: rgba(14, 28, 54, 0.85);
       color: #ccc;
       text-align: center;
       padding: 12px;
       font-size: 14px;
+      box-shadow: 0 -4px 15px rgba(0,0,0,0.15);
+      border-radius: 15px 15px 0 0;
     }
 
     @media (max-width: 600px) {
@@ -113,12 +138,12 @@
 
     <div class="info-group">
       <strong>Course Registration Link:</strong>
-      <a href="https://internship.aicte-india.org/internship-details.php?uid=SU5URVJOU0hJUF8xNzQ2MDgxNjEwNjgxMzE3NGFjYWNjMQ%3D%3D&level=NA%3D%3D" target="_blank">Click here to register</a>
+      <a href="https://internship.aicte-india.org/internship-details.php?uid=SU5URVJOU0hJUF8xNzQ2MDgxNjEwNjgxMzE3NGFjYWNjMQ%3D%3D&level=NA%3D%3D" target="_blank" rel="noopener noreferrer">Click here to register</a>
     </div>
 
     <div class="info-group">
       <strong>Signup to AICTE Portal:</strong>
-      <a href="https://internship.aicte-india.org/register_new.php" target="_blank">Create an account</a>
+      <a href="https://internship.aicte-india.org/register_new.php" target="_blank" rel="noopener noreferrer">Create an account</a>
     </div>
 
     <div class="info-group">
@@ -148,3 +173,4 @@
 
 </body>
 </html>
+
