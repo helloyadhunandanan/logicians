@@ -17,7 +17,6 @@
       overflow: hidden;
     }
 
-    /* === Animated Rainbow Wave Background === */
     .animated-bg {
       position: fixed;
       width: 200%;
@@ -42,7 +41,6 @@
       z-index: 1;
     }
 
-    /* === Container Styling === */
     .container {
       position: relative;
       z-index: 2;
@@ -126,11 +124,9 @@
 </head>
 <body>
 
-  <!-- Animated Fullscreen Background -->
   <div class="animated-bg"></div>
   <div class="overlay"></div>
 
-  <!-- Main Form Section -->
   <div class="container">
     <div class="card">
       <h2>📄 Universal Document & Image Converter</h2>
@@ -161,20 +157,34 @@
     document.getElementById("docConvertForm").addEventListener("submit", function(e) {
       e.preventDefault();
 
-      const file = document.getElementById("fileInput").files[0];
+      const fileInput = document.getElementById("fileInput");
       const format = document.getElementById("outputFormat").value;
       const resultDiv = document.getElementById("conversionResult");
 
-      if (!file) {
-        alert("Please upload a file.");
+      if (!fileInput.files.length || !format) {
+        alert("Please upload a file and select a format.");
         return;
       }
 
+      const file = fileInput.files[0];
+      const fileName = file.name.split(".")[0];
+
       resultDiv.innerHTML = "⏳ Converting... Please wait.";
 
+      // Simulate conversion delay
       setTimeout(() => {
-        const fileName = file.name.split(".")[0];
-        resultDiv.innerHTML = `✅ Conversion complete!<br><a href="#" download="${fileName}_converted.${format}">Download converted file</a>`;
+        // Dummy content for the converted file
+        const dummyContent = `This is a dummy converted file: ${file.name} to ${format.toUpperCase()}`;
+        const blob = new Blob([dummyContent], { type: "application/octet-stream" });
+        const url = URL.createObjectURL(blob);
+
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `${fileName}_converted.${format}`;
+        link.textContent = "⬇️ Download converted file";
+
+        resultDiv.innerHTML = "✅ Conversion complete!<br>";
+        resultDiv.appendChild(link);
       }, 1500);
     });
 
