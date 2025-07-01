@@ -1,7 +1,7 @@
 # 🌐 Logicians Community Website
 
 Welcome to the **Logicians Community Repository**!  
-This is the official codebase for our student-driven initiative from [Your College Name], aiming to empower and inform fellow classmates with the latest opportunities and resources in the tech world.
+This is the official codebase for our student-driven initiative from CETKR, aiming to empower and inform fellow classmates with the latest opportunities and resources in the tech world.
 
 ---
 
